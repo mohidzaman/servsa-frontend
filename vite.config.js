@@ -1,11 +1,25 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+import sitemap from 'vite-plugin-sitemap'
 
 export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
+    sitemap({
+      hostname: 'https://servsa.online',
+      dynamicRoutes: [
+        '/about',
+        '/services',
+        '/portfolio',
+        '/contact',
+        '/privacy-policy',
+        '/terms-and-conditions',
+      ],
+      generateRobotsTxt: true,
+      readable: true,
+    }),
   ],
   optimizeDeps: {
     include: ['cookie', 'set-cookie-parser'],
