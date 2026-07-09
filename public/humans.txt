@@ -1,0 +1,17 @@
+/* TEAM */
+CEO & Founder: Mohid Zaman
+CTO: Hashim
+Head of Design: Ahmed Asif
+Lead Developer: Rohsan Sahmas
+
+/* SITE */
+Language: English
+Standards: HTML5, CSS3, JavaScript (React), Tailwind CSS
+Backend: Express.js, Prisma, PostgreSQL (Supabase)
+Hosting: Supabase
+
+/* THANKS */
+Built with love by the Servsa team.
+
+/* UPDATED */
+2026-07-09
