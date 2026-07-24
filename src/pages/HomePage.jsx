@@ -11,6 +11,7 @@ import { usePortfolio } from '../hooks/usePortfolio';
 import { ContainerScroll, ScrollReveal, ParallaxSection } from '../components/ContainerScroll';
 import { fadeUp, prefersReducedMotion } from '../utils/motion';
 import SeoMeta from '../seo/SeoMeta'
+import { PAGE_SEO } from '../seo/seo.config'
 
 const trustedLogos = [
   'React', 'Node.js', 'TypeScript', 'Python', 'AWS', 'Docker',
@@ -64,7 +65,13 @@ export default function HomePage() {
 
   return (
     <>
-      <SeoMeta title="Home" description="Servsa is a digital agency specializing in web development, UI/UX design, mobile apps, and cloud solutions." canonical="/" ogType="website" />
+      <SeoMeta
+        title={PAGE_SEO.home.title}
+        description={PAGE_SEO.home.description}
+        canonical={PAGE_SEO.home.canonical}
+        keywords={PAGE_SEO.home.keywords}
+        ogType="website"
+      />
       <div className="overflow-x-hidden bg-atmos-deep">
       {/* ============ HERO ============ */}
       <ParallaxSection speed={0.15} className="min-h-screen">

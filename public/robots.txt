@@ -1,7 +1,29 @@
+# robots.txt — Servsa (https://servsa.online)
+# Generated: 2026-07-24
+
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /api/
-Disallow: /404
 
-Sitemap: https://servsa.online/api/sitemap.xml
+# Disallow private/admin areas
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api
+Disallow: /api/
+Disallow: /dashboard
+Disallow: /dashboard/
+Disallow: /private
+Disallow: /private/
+
+# Disallow utility/error pages
+Disallow: /404
+Disallow: /thank-you
+Disallow: /quote
+
+# Crawl-delay (optional — helps with large sites)
+Crawl-delay: 1
+
+# Sitemap reference
+Sitemap: https://servsa.online/sitemap.xml
+
+# Host directive (Bing + Yandex)
+Host: https://servsa.online

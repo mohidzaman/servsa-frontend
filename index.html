@@ -2,13 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- ====== FAVICON & ICONS ====== -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- ====== VIEWPORT & THEME ====== -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0a0a1a" />
+    <meta name="theme-color" content="#0B1020" />
     <meta name="color-scheme" content="dark" />
+    <meta name="msapplication-TileColor" content="#0B1020" />
+
+    <!-- ====== APPLICATION META ====== -->
     <meta name="application-name" content="Servsa" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -16,21 +24,119 @@
     <meta name="apple-mobile-web-app-title" content="Servsa" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <meta name="description" content="Servsa is a digital agency specializing in web development, UI/UX design, mobile apps, cloud infrastructure, and DevOps. We build high-performance digital experiences that drive growth." />
-    <meta name="robots" content="index, follow" />
+    <!-- ====== SEO: PRIMARY META ====== -->
+    <title>Servsa | Web Development, AI &amp; Digital Solutions Company</title>
+    <meta name="description" content="Servsa builds enterprise-grade web applications, AI solutions, UI/UX design, cloud infrastructure, DevOps, and custom software for businesses worldwide." />
+    <meta name="keywords" content="Servsa, Servsa Software Company, Servsa Digital Agency, Web Development Company, UI UX Design Agency, Mobile App Development, Cloud Infrastructure, DevOps Services, AI Solutions, Software Development Pakistan, Custom Web Development, Enterprise Software, Digital Transformation" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="author" content="Servsa Technologies" />
+    <meta name="copyright" content="Servsa Technologies" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+    <link rel="canonical" href="https://servsa.online/" />
 
+    <!-- ====== OPEN GRAPH ====== -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Servsa" />
     <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Servsa | Web Development, AI &amp; Digital Solutions Company" />
+    <meta property="og:description" content="Servsa builds enterprise-grade web applications, AI solutions, UI/UX design, cloud infrastructure, DevOps, and custom software for businesses worldwide." />
+    <meta property="og:url" content="https://servsa.online/" />
+    <meta property="og:image" content="https://servsa.online/android-chrome-512x512.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:alt" content="Servsa — Web Development, AI &amp; Digital Solutions Company" />
 
+    <!-- ====== TWITTER CARD ====== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@servsa" />
+    <meta name="twitter:creator" content="@servsa" />
+    <meta name="twitter:title" content="Servsa | Web Development, AI &amp; Digital Solutions Company" />
+    <meta name="twitter:description" content="Servsa builds enterprise-grade web applications, AI solutions, UI/UX design, cloud infrastructure, DevOps, and custom software for businesses worldwide." />
+    <meta name="twitter:image" content="https://servsa.online/android-chrome-512x512.png" />
+    <meta name="twitter:image:alt" content="Servsa — Digital Agency" />
+
+    <!-- ====== JSON-LD: ORGANIZATION SCHEMA ====== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["Organization", "ProfessionalService", "SoftwareCompany"],
+      "name": "Servsa",
+      "legalName": "Servsa Technologies",
+      "url": "https://servsa.online",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://servsa.online/favicon.ico",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://servsa.online/android-chrome-512x512.png",
+      "description": "Servsa builds enterprise-grade web applications, AI solutions, UI/UX design, cloud infrastructure, DevOps, and custom software for businesses worldwide.",
+      "foundingDate": "2024",
+      "founder": {
+        "@type": "Person",
+        "name": "Mohid Zaman"
+      },
+      "email": "info@servsa.online",
+      "telephone": "+92-345-0513634",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Business Avenue",
+        "addressLocality": "Karachi",
+        "addressRegion": "Sindh",
+        "postalCode": "74000",
+        "addressCountry": "PK"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+92-345-0513634",
+        "email": "info@servsa.online",
+        "contactType": "customer service",
+        "availableLanguage": ["English", "Urdu"],
+        "areaServed": ["PK", "AE", "US", "GB"]
+      },
+      "sameAs": [],
+      "areaServed": ["Karachi", "Lahore", "Islamabad", "Pakistan", "UAE", "USA", "UK"],
+      "knowsAbout": [
+        "Web Development",
+        "UI/UX Design",
+        "Mobile App Development",
+        "Cloud Infrastructure",
+        "DevOps",
+        "AI Solutions",
+        "Enterprise Software",
+        "Digital Transformation"
+      ]
+    }
+    </script>
+
+    <!-- ====== JSON-LD: WEBSITE SCHEMA ====== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Servsa",
+      "url": "https://servsa.online",
+      "description": "Servsa builds enterprise-grade web applications, AI solutions, UI/UX design, cloud infrastructure, DevOps, and custom software for businesses worldwide.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://servsa.online/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- ====== FONTS ====== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" />
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" /></noscript>
-
-    <title>Servsa — Digital Agency | Web Development, UI/UX Design & Cloud Solutions</title>
   </head>
   <body>
     <div id="root"></div>

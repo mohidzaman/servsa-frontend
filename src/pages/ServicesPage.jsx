@@ -8,6 +8,7 @@ import { fadeUp } from '../utils/motion';
 import SkeletonCard from '../components/ui/SkeletonCard';
 import SeoMeta from '../seo/SeoMeta'
 import { BreadcrumbSchema, ServiceSchema } from '../seo/SeoSchema'
+import { PAGE_SEO } from '../seo/seo.config'
 
 export default function ServicesPage() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -21,7 +22,12 @@ export default function ServicesPage() {
 
   return (
     <>
-      <SeoMeta title="Services" description="Explore Servsa's full range of digital services including web development, UI/UX design, mobile apps, cloud infrastructure, and DevOps." canonical="/services" />
+      <SeoMeta
+        title={PAGE_SEO.services.title}
+        description={PAGE_SEO.services.description}
+        canonical={PAGE_SEO.services.canonical}
+        keywords={PAGE_SEO.services.keywords}
+      />
       <BreadcrumbSchema items={[{ name: 'Home', path: '/' }, { name: 'Services', path: '/services' }]} />
       <ServiceSchema services={services || []} />
       <div className="min-h-screen bg-atmos-deep">

@@ -8,6 +8,7 @@ import { fadeUp } from '../utils/motion';
 import SkeletonCard from '../components/ui/SkeletonCard';
 import SeoMeta from '../seo/SeoMeta'
 import { BreadcrumbSchema, PortfolioSchema } from '../seo/SeoSchema'
+import { PAGE_SEO } from '../seo/seo.config'
 
 export default function PortfolioPage() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -25,7 +26,12 @@ export default function PortfolioPage() {
 
   return (
     <>
-      <SeoMeta title="Portfolio" description="View Servsa's portfolio of web development, UI/UX design, mobile app, and cloud projects." canonical="/portfolio" />
+      <SeoMeta
+        title={PAGE_SEO.portfolio.title}
+        description={PAGE_SEO.portfolio.description}
+        canonical={PAGE_SEO.portfolio.canonical}
+        keywords={PAGE_SEO.portfolio.keywords}
+      />
       <BreadcrumbSchema items={[{ name: 'Home', path: '/' }, { name: 'Portfolio', path: '/portfolio' }]} />
       <PortfolioSchema projects={projects || []} />
       <div className="min-h-screen bg-atmos-deep">

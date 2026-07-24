@@ -8,16 +8,31 @@ import {
 export function OrganizationSchema() {
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
+    '@type': ['Organization', 'ProfessionalService', 'SoftwareCompany'],
     name: COMPANY_NAME,
     legalName: COMPANY_LEGAL_NAME,
     url: SITE_URL,
-    founder: COMPANY_FOUNDER,
+    founder: { '@type': 'Person', name: COMPANY_FOUNDER },
     foundingDate: COMPANY_FOUNDED,
     email: COMPANY_EMAIL,
     telephone: COMPANY_PHONE,
-    logo: `${SITE_URL}/favicon.svg`,
-    sameAs: Object.values(COMPANY_SOCIAL),
+    logo: {
+      '@type': 'ImageObject',
+      url: `${SITE_URL}/favicon.ico`,
+      width: 512,
+      height: 512,
+    },
+    image: `${SITE_URL}/android-chrome-512x512.png`,
+    description: SITE_DESCRIPTION,
+    sameAs: [],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: COMPANY_PHONE,
+      email: COMPANY_EMAIL,
+      contactType: 'customer service',
+      availableLanguage: ['English', 'Urdu'],
+      areaServed: ['PK', 'AE', 'US', 'GB'],
+    },
     address: {
       '@type': 'PostalAddress',
       streetAddress: COMPANY_ADDRESS.street,
@@ -26,6 +41,7 @@ export function OrganizationSchema() {
       postalCode: COMPANY_ADDRESS.postalCode,
       addressCountry: COMPANY_ADDRESS.country,
     },
+    areaServed: SERVICE_AREAS.map((c) => ({ '@type': 'City', name: c })),
   }
   return <Helmet><script type="application/ld+json">{JSON.stringify(schema)}</script></Helmet>
 }
@@ -88,12 +104,12 @@ export function LocalBusinessSchema() {
     name: COMPANY_NAME,
     legalName: COMPANY_LEGAL_NAME,
     url: SITE_URL,
-    founder: COMPANY_FOUNDER,
+    founder: { '@type': 'Person', name: COMPANY_FOUNDER },
     foundingDate: COMPANY_FOUNDED,
     email: COMPANY_EMAIL,
     telephone: COMPANY_PHONE,
-    logo: `${SITE_URL}/favicon.svg`,
-    image: `${SITE_URL}/og-default.png`,
+    logo: `${SITE_URL}/favicon.ico`,
+    image: `${SITE_URL}/android-chrome-512x512.png`,
     sameAs: Object.values(COMPANY_SOCIAL),
     address: {
       '@type': 'PostalAddress',

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { fadeUp } from '../utils/motion';
 import SeoMeta from '../seo/SeoMeta'
 import { BreadcrumbSchema, FaqSchema } from '../seo/SeoSchema'
+import { PAGE_SEO } from '../seo/seo.config'
 
 const faqData = [
   { category: 'General', q: 'What services does Servsa offer?', a: 'Servsa offers comprehensive digital solutions including web development, UI/UX design, digital strategy, brand identity, SEO, and custom software development tailored for enterprise organizations.' },
@@ -43,7 +44,12 @@ export default function FaqPage() {
 
   return (
     <>
-      <SeoMeta title="FAQ" description="Frequently asked questions about Servsa's services, process, pricing, and more." canonical="/faq" />
+      <SeoMeta
+        title={PAGE_SEO.faq.title}
+        description={PAGE_SEO.faq.description}
+        canonical={PAGE_SEO.faq.canonical}
+        keywords={PAGE_SEO.faq.keywords}
+      />
       <BreadcrumbSchema items={[{ name: 'Home', path: '/' }, { name: 'FAQ', path: '/faq' }]} />
       <FaqSchema questions={faqData} />
       <div className="min-h-screen bg-atmos-deep">

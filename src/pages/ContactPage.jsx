@@ -8,6 +8,7 @@ import { contactApi } from '../api/contact.api';
 import { fadeUp } from '../utils/motion';
 import SeoMeta from '../seo/SeoMeta'
 import { BreadcrumbSchema } from '../seo/SeoSchema'
+import { PAGE_SEO } from '../seo/seo.config'
 
 const schema = z.object({
   firstName: z.string().min(1, 'First name is required').max(100, 'Max 100 characters').trim(),
@@ -47,7 +48,12 @@ export default function ContactPage() {
 
   return (
     <>
-      <SeoMeta title="Contact Us" description="Get in touch with Servsa. Let's discuss how we can help transform your digital presence." canonical="/contact" />
+      <SeoMeta
+        title={PAGE_SEO.contact.title}
+        description={PAGE_SEO.contact.description}
+        canonical={PAGE_SEO.contact.canonical}
+        keywords={PAGE_SEO.contact.keywords}
+      />
       <BreadcrumbSchema items={[{ name: 'Home', path: '/' }, { name: 'Contact Us', path: '/contact' }]} />
       <div className="min-h-screen bg-atmos-deep">
       {/* ============ HERO ============ */}

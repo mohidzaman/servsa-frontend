@@ -10,14 +10,15 @@ export default defineConfig({
     sitemap({
       hostname: 'https://servsa.online',
       dynamicRoutes: [
+        '/',
         '/about',
         '/services',
         '/portfolio',
         '/contact',
-        '/privacy-policy',
-        '/terms-and-conditions',
+        '/faq',
       ],
-      generateRobotsTxt: true,
+      // NOTE: robots.txt is manually maintained at public/robots.txt — do NOT auto-generate
+      generateRobotsTxt: false,
       readable: true,
     }),
   ],

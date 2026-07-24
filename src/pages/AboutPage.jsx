@@ -5,6 +5,7 @@ import { ContainerScroll, ParallaxSection } from '../components/ContainerScroll'
 import { fadeUp, scaleOnScroll } from '../utils/motion';
 import SeoMeta from '../seo/SeoMeta'
 import { BreadcrumbSchema } from '../seo/SeoSchema'
+import { PAGE_SEO } from '../seo/seo.config'
 
 const values = [
   { icon: Target, title: 'Mission-Driven', desc: 'Every decision we make is aligned with delivering measurable impact for our clients and their communities.' },
@@ -37,7 +38,12 @@ const stats = [
 export default function AboutPage() {
   return (
     <>
-      <SeoMeta title="About Us" description="Learn about Servsa — our story, mission, values, and the team behind our digital agency." canonical="/about" />
+      <SeoMeta
+        title={PAGE_SEO.about.title}
+        description={PAGE_SEO.about.description}
+        canonical={PAGE_SEO.about.canonical}
+        keywords={PAGE_SEO.about.keywords}
+      />
       <BreadcrumbSchema items={[{ name: 'Home', path: '/' }, { name: 'About Us', path: '/about' }]} />
       <div className="min-h-screen bg-atmos-deep">
       {/* ============ HERO BANNER ============ */}
